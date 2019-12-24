@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.eservecloud.proto.grpc.hello.generated;
+
+message HelloRequest {
+	string firstName = 1;
+	string lastName = 2;
+	string newParam = 3;
+}
+
+message HelloResponse {
+	string greeting = 1;
+	string responseParam = 2;
+}
+
+service HelloService{
+	rpc hello(HelloRequest) returns (HelloResponse);
+}
